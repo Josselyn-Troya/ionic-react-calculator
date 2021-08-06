@@ -1,5 +1,5 @@
 .calculatorContainer {
-    background-color: white;    
+    background-color: rgb(180, 224, 245);    
     
 }
 
@@ -18,6 +18,8 @@
 .sumContainer p {
     margin: 0;
     padding: 0;
+    padding-top: 100px;
+    
 }
 
 .sumContainer h1 {

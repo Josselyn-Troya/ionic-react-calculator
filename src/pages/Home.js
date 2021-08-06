@@ -1,4 +1,6 @@
-import { IonContent, IonFooter, IonGrid, IonHeader, IonPage } from '@ionic/react';
+import { IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonCard, 
+	IonItem, IonIcon, IonLabel } from '@ionic/react';
+import { wifi} from 'ionicons/icons';
 import { useEffect, useState } from 'react';
 import Button from '../components/Button';
 import ButtonRow from '../components/ButtonRow';
@@ -56,16 +58,23 @@ const Home = () => {
 
 	return (
 		<IonPage>
-			<IonHeader></IonHeader>
+			<IonHeader>
+			
+			</IonHeader>
 			<IonContent fullscreen>
+			
+			<IonCard className={ styles.sumContainer } >
+          <IonItem href="#" className="ion-activated">
+            <h1>Calculadora con Ionic - React</h1>
+          </IonItem>
+		  </IonCard>
+		  
+			<IonCard>
 				<div className={ styles.sumContainer }>
 					<p>{ sumHistory }</p>
 					<h1>{ sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") }</h1>
 				</div>
-			</IonContent>
-
-			<IonFooter className={ styles.calculatorContainer }>
-				<IonGrid className="ion-text-center ion-justify-content-center">
+				<IonGrid className="ion-text-center ion-justify-content-center" >
 
 					{ buttons.map((buttonRow, index) => {
 
@@ -79,6 +88,10 @@ const Home = () => {
 						);
 					})}
 				</IonGrid>
+				</IonCard>
+			</IonContent>
+
+			<IonFooter className={ styles.calculatorContainer }>
 			</IonFooter>
 		</IonPage>
 	);
